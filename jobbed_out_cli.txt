@@ -1,0 +1,637 @@
+Last login: Thu Sep 24 16:31:44 on ttys001
+sean_shannon ~
+$ cd ~/Sites/general_assembly/atx-2-class/
+sean_shannon ~/Sites/general_assembly/atx-2-class on master[!]
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   w05/d05/README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+sean_shannon ~/Sites/general_assembly/atx-2-class on master[!]
+$ git add .
+sean_shannon ~/Sites/general_assembly/atx-2-class on master[+]
+$ git commit -m "Adding readme for JobbedOut"
+[master 02985e5] Adding readme for JobbedOut
+ 1 file changed, 97 insertions(+)
+sean_shannon ~/Sites/general_assembly/atx-2-class on master
+$ git push
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 2.85 KiB | 0 bytes/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+To git@github.com:ga-students/wdi-atx-2-class.git
+   4cb494b..02985e5  master -> master
+sean_shannon ~/Sites/general_assembly/atx-2-class on master
+$ cd ..
+sean_shannon ~/Sites/general_assembly
+$ ls
+atx-2-class/  class-attendance/      projects/	wdi-atx/
+atx-2-hw/     previous_wdi_cohorts/  scratch/
+sean_shannon ~/Sites/general_assembly
+$ cd scratch/
+sean_shannon ~/Sites/general_assembly/scratch
+$ ls
+GrumblrApp/   ga-omdb/	       isprime.js	    student.rb
+auth_lesson/  gif_generator/   method_missing.rb    tic-tac-toe/
+beer_app/     growlr/	       omdbapi-movie-info/  ultimate_complimenter/
+dog.rb	      homework-sol.rb  omdbui/
+forms/	      hsp_app/	       sean_module.rb
+sean_shannon ~/Sites/general_assembly/scratch
+$ rails new jobbed_out -d postgresql
+      create  
+      create  README.rdoc
+      create  Rakefile
+      create  config.ru
+      create  .gitignore
+      create  Gemfile
+      create  app
+      create  app/assets/javascripts/application.js
+      create  app/assets/stylesheets/application.css
+      create  app/controllers/application_controller.rb
+      create  app/helpers/application_helper.rb
+      create  app/views/layouts/application.html.erb
+      create  app/assets/images/.keep
+      create  app/mailers/.keep
+      create  app/models/.keep
+      create  app/controllers/concerns/.keep
+      create  app/models/concerns/.keep
+      create  bin
+      create  bin/bundle
+      create  bin/rails
+      create  bin/rake
+      create  bin/setup
+      create  config
+      create  config/routes.rb
+      create  config/application.rb
+      create  config/environment.rb
+      create  config/secrets.yml
+      create  config/environments
+      create  config/environments/development.rb
+      create  config/environments/production.rb
+      create  config/environments/test.rb
+      create  config/initializers
+      create  config/initializers/assets.rb
+      create  config/initializers/backtrace_silencers.rb
+      create  config/initializers/cookies_serializer.rb
+      create  config/initializers/filter_parameter_logging.rb
+      create  config/initializers/inflections.rb
+      create  config/initializers/mime_types.rb
+      create  config/initializers/session_store.rb
+      create  config/initializers/wrap_parameters.rb
+      create  config/locales
+      create  config/locales/en.yml
+      create  config/boot.rb
+      create  config/database.yml
+      create  db
+      create  db/seeds.rb
+      create  lib
+      create  lib/tasks
+      create  lib/tasks/.keep
+      create  lib/assets
+      create  lib/assets/.keep
+      create  log
+      create  log/.keep
+      create  public
+      create  public/404.html
+      create  public/422.html
+      create  public/500.html
+      create  public/favicon.ico
+      create  public/robots.txt
+      create  test/fixtures
+      create  test/fixtures/.keep
+      create  test/controllers
+      create  test/controllers/.keep
+      create  test/mailers
+      create  test/mailers/.keep
+      create  test/models
+      create  test/models/.keep
+      create  test/helpers
+      create  test/helpers/.keep
+      create  test/integration
+      create  test/integration/.keep
+      create  test/test_helper.rb
+      create  tmp/cache
+      create  tmp/cache/assets
+      create  vendor/assets/javascripts
+      create  vendor/assets/javascripts/.keep
+      create  vendor/assets/stylesheets
+      create  vendor/assets/stylesheets/.keep
+         run  bundle install
+Fetching gem metadata from https://rubygems.org/............
+Fetching version metadata from https://rubygems.org/...
+Fetching dependency metadata from https://rubygems.org/..
+Resolving dependencies.....
+Using rake 10.4.2
+Using i18n 0.7.0
+Using json 1.8.3
+Installing minitest 5.8.1
+Using thread_safe 0.3.5
+Using tzinfo 1.2.2
+Using activesupport 4.2.4
+Using builder 3.2.2
+Using erubis 2.7.0
+Using mini_portile 0.6.2
+Using nokogiri 1.6.6.2
+Using rails-deprecated_sanitizer 1.0.3
+Using rails-dom-testing 1.0.7
+Using loofah 2.0.3
+Using rails-html-sanitizer 1.0.2
+Using actionview 4.2.4
+Using rack 1.6.4
+Using rack-test 0.6.3
+Using actionpack 4.2.4
+Using globalid 0.3.6
+Using activejob 4.2.4
+Using mime-types 2.6.2
+Using mail 2.6.3
+Using actionmailer 4.2.4
+Using activemodel 4.2.4
+Using arel 6.0.3
+Using activerecord 4.2.4
+Using debug_inspector 0.0.2
+Using binding_of_caller 0.7.2
+Using bundler 1.10.6
+Using byebug 6.0.2
+Using coffee-script-source 1.9.1.1
+Using execjs 2.6.0
+Using coffee-script 2.4.1
+Using thor 0.19.1
+Using railties 4.2.4
+Using coffee-rails 4.1.0
+Using multi_json 1.11.2
+Using jbuilder 2.3.1
+Using jquery-rails 4.0.5
+Using pg 0.18.3
+Using sprockets 3.3.4
+Using sprockets-rails 2.3.3
+Using rails 4.2.4
+Using rdoc 4.2.0
+Using sass 3.4.18
+Using tilt 2.0.1
+Using sass-rails 5.0.4
+Using sdoc 0.4.1
+Using spring 1.4.0
+Using turbolinks 2.5.3
+Using uglifier 2.7.2
+Using web-console 2.2.1
+Bundle complete! 12 Gemfile dependencies, 53 gems now installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+         run  bundle exec spring binstub --all
+* bin/rake: spring inserted
+* bin/rails: spring inserted
+sean_shannon ~/Sites/general_assembly/scratch
+$ cd jobbed_out/
+sean_shannon ~/Sites/general_assembly/scratch/jobbed_out
+$ ls
+Gemfile       README.rdoc  app/  config/    db/   log/	   test/  vendor/
+Gemfile.lock  Rakefile	   bin/  config.ru  lib/  public/  tmp/
+sean_shannon ~/Sites/general_assembly/scratch/jobbed_out
+$ subl .
+sean_shannon ~/Sites/general_assembly/scratch/jobbed_out
+$ git init
+Initialized empty Git repository in /Users/sean_shannon/Sites/general_assembly/scratch/jobbed_out/.git/
+sean_shannon ~/Sites/general_assembly/scratch/jobbed_out on master[?]
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.gitignore
+	Gemfile
+	Gemfile.lock
+	README.rdoc
+	Rakefile
+	app/
+	bin/
+	config.ru
+	config/
+	db/
+	lib/
+	log/
+	public/
+	test/
+	vendor/
+
+nothing added to commit but untracked files present (use "git add" to track)
+sean_shannon ~/Sites/general_assembly/scratch/jobbed_out on master[?]
+$ git add .
+sean_shannon ~/Sites/general_assembly/scratch/jobbed_out on master[+]
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   .gitignore
+	new file:   Gemfile
+	new file:   Gemfile.lock
+	new file:   README.rdoc
+	new file:   Rakefile
+	new file:   app/assets/images/.keep
+	new file:   app/assets/javascripts/application.js
+	new file:   app/assets/stylesheets/application.css
+	new file:   app/controllers/application_controller.rb
+	new file:   app/controllers/concerns/.keep
+	new file:   app/helpers/application_helper.rb
+	new file:   app/mailers/.keep
+	new file:   app/models/.keep
+	new file:   app/models/concerns/.keep
+	new file:   app/views/layouts/application.html.erb
+	new file:   bin/bundle
+	new file:   bin/rails
+	new file:   bin/rake
+	new file:   bin/setup
+	new file:   bin/spring
+	new file:   config.ru
+	new file:   config/application.rb
+	new file:   config/boot.rb
+	new file:   config/database.yml
+	new file:   config/environment.rb
+	new file:   config/environments/development.rb
+	new file:   config/environments/production.rb
+	new file:   config/environments/test.rb
+	new file:   config/initializers/assets.rb
+	new file:   config/initializers/backtrace_silencers.rb
+	new file:   config/initializers/cookies_serializer.rb
+	new file:   config/initializers/filter_parameter_logging.rb
+	new file:   config/initializers/inflections.rb
+	new file:   config/initializers/mime_types.rb
+	new file:   config/initializers/session_store.rb
+	new file:   config/initializers/wrap_parameters.rb
+	new file:   config/locales/en.yml
+	new file:   config/routes.rb
+	new file:   config/secrets.yml
+	new file:   db/seeds.rb
+	new file:   lib/assets/.keep
+	new file:   lib/tasks/.keep
+	new file:   log/.keep
+	new file:   public/404.html
+	new file:   public/422.html
+	new file:   public/500.html
+	new file:   public/favicon.ico
+	new file:   public/robots.txt
+	new file:   test/controllers/.keep
+	new file:   test/fixtures/.keep
+	new file:   test/helpers/.keep
+	new file:   test/integration/.keep
+	new file:   test/mailers/.keep
+	new file:   test/models/.keep
+	new file:   test/test_helper.rb
+	new file:   vendor/assets/javascripts/.keep
+	new file:   vendor/assets/stylesheets/.keep
+
+sean_shannon ~/Sites/general_assembly/scratch/jobbed_out on master[+]
+$ git commit -m "First commit of Jobbed Out"
+[master (root-commit) 51ae95a] First commit of Jobbed Out
+ 57 files changed, 1035 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 Gemfile
+ create mode 100644 Gemfile.lock
+ create mode 100644 README.rdoc
+ create mode 100644 Rakefile
+ create mode 100644 app/assets/images/.keep
+ create mode 100644 app/assets/javascripts/application.js
+ create mode 100644 app/assets/stylesheets/application.css
+ create mode 100644 app/controllers/application_controller.rb
+ create mode 100644 app/controllers/concerns/.keep
+ create mode 100644 app/helpers/application_helper.rb
+ create mode 100644 app/mailers/.keep
+ create mode 100644 app/models/.keep
+ create mode 100644 app/models/concerns/.keep
+ create mode 100644 app/views/layouts/application.html.erb
+ create mode 100755 bin/bundle
+ create mode 100755 bin/rails
+ create mode 100755 bin/rake
+ create mode 100755 bin/setup
+ create mode 100755 bin/spring
+ create mode 100644 config.ru
+ create mode 100644 config/application.rb
+ create mode 100644 config/boot.rb
+ create mode 100644 config/database.yml
+ create mode 100644 config/environment.rb
+ create mode 100644 config/environments/development.rb
+ create mode 100644 config/environments/production.rb
+ create mode 100644 config/environments/test.rb
+ create mode 100644 config/initializers/assets.rb
+ create mode 100644 config/initializers/backtrace_silencers.rb
+ create mode 100644 config/initializers/cookies_serializer.rb
+ create mode 100644 config/initializers/filter_parameter_logging.rb
+ create mode 100644 config/initializers/inflections.rb
+ create mode 100644 config/initializers/mime_types.rb
+ create mode 100644 config/initializers/session_store.rb
+ create mode 100644 config/initializers/wrap_parameters.rb
+ create mode 100644 config/locales/en.yml
+ create mode 100644 config/routes.rb
+ create mode 100644 config/secrets.yml
+ create mode 100644 db/seeds.rb
+ create mode 100644 lib/assets/.keep
+ create mode 100644 lib/tasks/.keep
+ create mode 100644 log/.keep
+ create mode 100644 public/404.html
+ create mode 100644 public/422.html
+ create mode 100644 public/500.html
+ create mode 100644 public/favicon.ico
+ create mode 100644 public/robots.txt
+ create mode 100644 test/controllers/.keep
+ create mode 100644 test/fixtures/.keep
+ create mode 100644 test/helpers/.keep
+ create mode 100644 test/integration/.keep
+ create mode 100644 test/mailers/.keep
+ create mode 100644 test/models/.keep
+ create mode 100644 test/test_helper.rb
+ create mode 100644 vendor/assets/javascripts/.keep
+ create mode 100644 vendor/assets/stylesheets/.keep
+sean_shannon ~/Sites/general_assembly/scratch/jobbed_out on master
+$ git remote -v
+sean_shannon ~/Sites/general_assembly/scratch/jobbed_out on master
+$ git remote add origin git@github.com:seans887/jobbed_out.git
+sean_shannon ~/Sites/general_assembly/scratch/jobbed_out on master
+$ git remote -v
+origin	git@github.com:seans887/jobbed_out.git (fetch)
+origin	git@github.com:seans887/jobbed_out.git (push)
+sean_shannon ~/Sites/general_assembly/scratch/jobbed_out on master
+$ git push -u origin master
+Counting objects: 64, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (53/53), done.
+Writing objects: 100% (64/64), 17.48 KiB | 0 bytes/s, done.
+Total 64 (delta 2), reused 0 (delta 0)
+To git@github.com:seans887/jobbed_out.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+sean_shannon ~/Sites/general_assembly/scratch/jobbed_out on master
+$ bundle install
+Resolving dependencies...
+Using rake 10.4.2
+Using i18n 0.7.0
+Using json 1.8.3
+Using minitest 5.8.1
+Using thread_safe 0.3.5
+Using tzinfo 1.2.2
+Using activesupport 4.2.4
+Using builder 3.2.2
+Using erubis 2.7.0
+Using mini_portile 0.6.2
+Using nokogiri 1.6.6.2
+Using rails-deprecated_sanitizer 1.0.3
+Using rails-dom-testing 1.0.7
+Using loofah 2.0.3
+Using rails-html-sanitizer 1.0.2
+Using actionview 4.2.4
+Using rack 1.6.4
+Using rack-test 0.6.3
+Using actionpack 4.2.4
+Using globalid 0.3.6
+Using activejob 4.2.4
+Using mime-types 2.6.2
+Using mail 2.6.3
+Using actionmailer 4.2.4
+Using activemodel 4.2.4
+Using arel 6.0.3
+Using activerecord 4.2.4
+Using bcrypt 3.1.10
+Using debug_inspector 0.0.2
+Using binding_of_caller 0.7.2
+Using bundler 1.10.6
+Using byebug 6.0.2
+Using coffee-script-source 1.9.1.1
+Using execjs 2.6.0
+Using coffee-script 2.4.1
+Using thor 0.19.1
+Using railties 4.2.4
+Using coffee-rails 4.1.0
+Using multipart-post 2.0.0
+Using faraday 0.9.1
+Using multi_json 1.11.2
+Using jbuilder 2.3.1
+Using jquery-rails 4.0.5
+Using jwt 1.5.1
+Using multi_xml 0.5.5
+Using oauth 0.4.7
+Using oauth2 1.0.0
+Using pg 0.18.3
+Using sprockets 3.3.4
+Using sprockets-rails 2.3.3
+Using rails 4.2.4
+Using rdoc 4.2.0
+Using sass 3.4.18
+Using tilt 2.0.1
+Using sass-rails 5.0.4
+Using sdoc 0.4.1
+Using sorcery 0.9.1
+Using spring 1.4.0
+Using turbolinks 2.5.3
+Using uglifier 2.7.2
+Using web-console 2.2.1
+Bundle complete! 13 Gemfile dependencies, 61 gems now installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+sean_shannon ~/Sites/general_assembly/scratch/jobbed_out on master[!]
+$ bundle install
+Resolving dependencies...
+Using rake 10.4.2
+Using i18n 0.7.0
+Using json 1.8.3
+Using minitest 5.8.1
+Using thread_safe 0.3.5
+Using tzinfo 1.2.2
+Using activesupport 4.2.4
+Using builder 3.2.2
+Using erubis 2.7.0
+Using mini_portile 0.6.2
+Using nokogiri 1.6.6.2
+Using rails-deprecated_sanitizer 1.0.3
+Using rails-dom-testing 1.0.7
+Using loofah 2.0.3
+Using rails-html-sanitizer 1.0.2
+Using actionview 4.2.4
+Using rack 1.6.4
+Using rack-test 0.6.3
+Using actionpack 4.2.4
+Using globalid 0.3.6
+Using activejob 4.2.4
+Using mime-types 2.6.2
+Using mail 2.6.3
+Using actionmailer 4.2.4
+Using activemodel 4.2.4
+Using arel 6.0.3
+Using activerecord 4.2.4
+Using bcrypt 3.1.10
+Using debug_inspector 0.0.2
+Using binding_of_caller 0.7.2
+Using bundler 1.10.6
+Using byebug 6.0.2
+Using coffee-script-source 1.9.1.1
+Using execjs 2.6.0
+Using coffee-script 2.4.1
+Using thor 0.19.1
+Using railties 4.2.4
+Using coffee-rails 4.1.0
+Using multipart-post 2.0.0
+Using faraday 0.9.1
+Using multi_json 1.11.2
+Using jbuilder 2.3.1
+Using jquery-rails 4.0.5
+Using jwt 1.5.1
+Using multi_xml 0.5.5
+Using oauth 0.4.7
+Using oauth2 1.0.0
+Using pg 0.18.3
+Using sprockets 3.3.4
+Using sprockets-rails 2.3.3
+Using rails 4.2.4
+Using rdoc 4.2.0
+Using sass 3.4.18
+Using tilt 2.0.1
+Using sass-rails 5.0.4
+Using sdoc 0.4.1
+Using sorcery 0.9.1
+Using spring 1.4.0
+Using turbolinks 2.5.3
+Using uglifier 2.7.2
+Using web-console 2.2.1
+Bundle complete! 13 Gemfile dependencies, 61 gems now installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+sean_shannon ~/Sites/general_assembly/scratch/jobbed_out on master[!]
+$ rails generate sorcery:install
+      create  config/initializers/sorcery.rb
+    generate  model User --skip-migration
+      invoke  active_record
+      create    app/models/user.rb
+      invoke    test_unit
+      create      test/models/user_test.rb
+      create      test/fixtures/users.yml
+      insert  app/models/user.rb
+      insert  app/models/user.rb
+      create  db/migrate/20150925150912_sorcery_core.rb
+sean_shannon ~/Sites/general_assembly/scratch/jobbed_out on master[!?]
+$ rake db:migrate
+rake aborted!
+ActiveRecord::NoDatabaseError: FATAL:  database "jobbed_out_development" does not exist
+
+PG::ConnectionBad: FATAL:  database "jobbed_out_development" does not exist
+
+Tasks: TOP => db:migrate
+(See full trace by running task with --trace)
+sean_shannon ~/Sites/general_assembly/scratch/jobbed_out on master[!?]
+$ rake db:create
+sean_shannon ~/Sites/general_assembly/scratch/jobbed_out on master[!?]
+$ rake db:migrate
+== 20150925150912 SorceryCore: migrating ======================================
+-- create_table(:users)
+   -> 0.0173s
+-- add_index(:users, :email, {:unique=>true})
+   -> 0.0079s
+== 20150925150912 SorceryCore: migrated (0.0255s) =============================
+
+sean_shannon ~/Sites/general_assembly/scratch/jobbed_out on master[!?]
+$ rails generate controller Users
+      create  app/controllers/users_controller.rb
+      invoke  erb
+      create    app/views/users
+      invoke  test_unit
+      create    test/controllers/users_controller_test.rb
+      invoke  helper
+      create    app/helpers/users_helper.rb
+      invoke    test_unit
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/users.coffee
+      invoke    scss
+      create      app/assets/stylesheets/users.scss
+sean_shannon ~/Sites/general_assembly/scratch/jobbed_out on master[!?]
+$ rails generate controller Session
+      create  app/controllers/session_controller.rb
+      invoke  erb
+      create    app/views/session
+      invoke  test_unit
+      create    test/controllers/session_controller_test.rb
+      invoke  helper
+      create    app/helpers/session_helper.rb
+      invoke    test_unit
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/session.coffee
+      invoke    scss
+      create      app/assets/stylesheets/session.scss
+sean_shannon ~/Sites/general_assembly/scratch/jobbed_out on master[!?]
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   Gemfile
+	modified:   Gemfile.lock
+	modified:   config/routes.rb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	app/assets/javascripts/session.coffee
+	app/assets/javascripts/users.coffee
+	app/assets/stylesheets/session.scss
+	app/assets/stylesheets/users.scss
+	app/controllers/session_controller.rb
+	app/controllers/users_controller.rb
+	app/helpers/session_helper.rb
+	app/helpers/users_helper.rb
+	app/models/user.rb
+	app/views/session/
+	app/views/users/
+	config/initializers/sorcery.rb
+	db/migrate/
+	db/schema.rb
+	test/controllers/session_controller_test.rb
+	test/controllers/users_controller_test.rb
+	test/fixtures/users.yml
+	test/models/user_test.rb
+
+no changes added to commit (use "git add" and/or "git commit -a")
+sean_shannon ~/Sites/general_assembly/scratch/jobbed_out on master[!?]
+$ git add .
+sean_shannon ~/Sites/general_assembly/scratch/jobbed_out on master[+]
+$ git commit -m "Adding sorcery base fies"
+[master 7615242] Adding sorcery base fies
+ 22 files changed, 626 insertions(+)
+ create mode 100644 app/assets/javascripts/session.coffee
+ create mode 100644 app/assets/javascripts/users.coffee
+ create mode 100644 app/assets/stylesheets/session.scss
+ create mode 100644 app/assets/stylesheets/users.scss
+ create mode 100644 app/controllers/session_controller.rb
+ create mode 100644 app/controllers/users_controller.rb
+ create mode 100644 app/helpers/session_helper.rb
+ create mode 100644 app/helpers/users_helper.rb
+ create mode 100644 app/models/user.rb
+ create mode 100644 app/views/session/new.html.erb
+ create mode 100644 app/views/users/new.html.erb
+ create mode 100644 app/views/users/show.html.erb
+ create mode 100644 config/initializers/sorcery.rb
+ create mode 100644 db/migrate/20150925150912_sorcery_core.rb
+ create mode 100644 db/schema.rb
+ create mode 100644 test/controllers/session_controller_test.rb
+ create mode 100644 test/controllers/users_controller_test.rb
+ create mode 100644 test/fixtures/users.yml
+ create mode 100644 test/models/user_test.rb
+sean_shannon ~/Sites/general_assembly/scratch/jobbed_out on master
+$ git push
+Counting objects: 40, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (35/35), done.
+Writing objects: 100% (40/40), 8.48 KiB | 0 bytes/s, done.
+Total 40 (delta 8), reused 0 (delta 0)
+To git@github.com:seans887/jobbed_out.git
+   51ae95a..7615242  master -> master
+sean_shannon ~/Sites/general_assembly/scratch/jobbed_out on master
+$ 
